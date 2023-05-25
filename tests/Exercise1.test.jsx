@@ -7,7 +7,7 @@ describe("React-Props : Exercise 1", () => {
     render(<Exercise1 />);
     const link1 = screen.getByText("Go to Google.com");
     const link2 = screen.getByText("Go to Techupth.com");
-    const link3 = screen.getByText("Go to facebook.com");
+    const link3 = screen.getByText("Go to Facebook.com");
     expect(link1).toHaveAttribute("href", "https://www.google.com");
     expect(link2).toHaveAttribute("href", "https://www.techupth.com");
     expect(link3).toHaveAttribute("href", "https://www.facebook.com");

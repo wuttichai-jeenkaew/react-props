@@ -42,15 +42,11 @@ describe("React-Props : Exercise 3", () => {
     );
     const data = await fs.readFileSync(exercisePath, "utf8");
 
-    const titleRegex = data.match(/Title: {article1\.title}/g);
-    const imgRegex = data.match(/src={article1\.image}/g);
-    const contentRegex = data.match(/Content: {article1\.content}/g);
-    const authorRegex = data.match(/Author: {article1\.author}/g);
+    const regex =
+      /Title: {article1\.title}|src={article1\.image}|Content: {article1\.content}|Author: {article1\.author}/g;
+    const found = data.match(regex);
 
-    expect(titleRegex.length).toBe(1);
-    expect(imgRegex.length).toBe(1);
-    expect(contentRegex.length).toBe(1);
-    expect(authorRegex.length).toBe(1);
+    expect(found.length).toBe(4);
   });
 
   it("ยังไม่ได้ส่ง props.children เข้าไปใน component ตัวที่สอง", async () => {
@@ -60,14 +56,10 @@ describe("React-Props : Exercise 3", () => {
     );
     const data = await fs.readFileSync(exercisePath, "utf8");
 
-    const titleRegex = data.match(/Title: {article2\.title}/g);
-    const imgRegex = data.match(/src={article2\.image}/g);
-    const contentRegex = data.match(/Content: {article2\.content}/g);
-    const authorRegex = data.match(/Author: {article2\.author}/g);
+    const regex =
+      /Title: {article2\.title}|src={article2\.image}|Content: {article2\.content}|Author: {article2\.author}/g;
+    const found = data.match(regex);
 
-    expect(titleRegex.length).toBe(1);
-    expect(imgRegex.length).toBe(1);
-    expect(contentRegex.length).toBe(1);
-    expect(authorRegex.length).toBe(1);
+    expect(found.length).toBe(4);
   });
 });
