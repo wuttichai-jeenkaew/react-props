@@ -1,11 +1,11 @@
 import React from "react";
 import "../App.css";
 
-const Exercise1 = () => {
-  function Link() {
-    return <a href="https://www.techupth.com">techupth.com</a>;
-  }
+const Link = () => {
+  return <a href="https://www.techupth.com">techupth.com</a>;
+};
 
+const Exercise1 = () => {
   return (
     <div className="container">
       <header>
