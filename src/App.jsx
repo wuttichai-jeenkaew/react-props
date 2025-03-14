@@ -99,12 +99,13 @@ function ProductSection() {
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2023 Your Ecommerce Store. All rights reserved.</p>
+      <p>&copy; 2023 Your Ecommerce Store. All rights reserved .</p>
     </footer>
   );
 }
 
 function Button(props) {
+
   return <button className={props.buttonStyle}>{props.buttonText}</button>;
 }
 
